@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Labubu Doll – Rare Collectible</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    :root {
+      --primary-color: #fcac00;
+      --hover-color: #e89c00;
+      --light-bg: #fffdf6;
+      --card-bg: #fff;
+      --text-dark: #222;
+      --border-radius: 12px;
+      --accent-color: crimson;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, sans-serif;
+      background-color: var(--light-bg);
+      color: var(--text-dark);
+      line-height: 1.6;
+      padding-bottom: 3rem;
+    }
+
+    header {
+      background-color: var(--primary-color);
+      color: white;
+      padding: 2rem 1rem;
+      text-align: center;
+      box-shadow: 0 2px 8px rgba(30, 9, 9, 0.1);
+    }
+
+    header h1 {
+      font-size: 2.4rem;
+      margin-bottom: 0.5rem;
+    }
+
+    main {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 2rem 1rem;
+    }
+
+.features {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 3rem;
+  text-align: center;
+}
+
+.feature {
+  background-color: var(--card-bg);
+  border-radius: var(--border-radius);
+  padding: 20px;
+  max-width: 280px;
+  box-shadow: 0 4px 14px rgba(220, 127, 6, 0.991);
+}
+
+.feature img {
+  width: 70px;
+  margin-bottom: 20px;
+}
+
+.feature h3 {
+  margin-bottom: 10px;
+  font-size: 1.1rem;
+}
+
+.feature p {
+  font-size: 0.95rem;
+  color: var(--text-dark);
+}
+  
+      .product-card {
+      background-color: var(--card-bg);
+      border-radius: var(--border-radius);
+      box-shadow: 0 6px 20px rgba(4, 4, 4, 0.968);
+      max-width: 920px;
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      padding: 2rem;
+      transition: transform 0.3s ease;
+     
+     
+    }
+
+    .product-card:hover {
+      transform: scale(1.01);
+    }
+
+    .product-image img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 10px;
+      transition: transform 0.3s ease;
+    }
+
+    .product-image img:hover {
+      transform: scale(1.05);
+    }
+
+    .product-details {
+      flex: 1;
+      min-width: 250px;
+    }
+
+    .product-details p {
+      margin-bottom: 1rem;
+      font-size: 1.05rem;
+    }
+
+    .product-details input[type="number"] {
+      width: 80px;
+      padding: 8px;
+      font-size: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+
+    .stock-alert {
+      color: var(--accent-color);
+      font-weight: bold;
+      margin-top: 1rem;
+    }
+
+    .rating-stars span {
+      font-size: 1.2rem;
+      color: rgb(255, 183, 0);
+      cursor: pointer;
+    }
+
+    .secure-checkout img {
+      height: 30px;
+      margin-right: 12px;
+    }
+
+    .buttons {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 2rem;
+      flex-wrap: wrap;
+    }
+
+    .buttons button {
+      background-color: var(--primary-color);
+      color: #dddddc;
+      border: none;
+      border-radius: 8px;
+      padding: 14px 28px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+    }
+
+    .buttons button:hover {
+      background-color: var(--hover-color);
+      transform: translateY(-2px);
+    }
+
+    .more-images {
+      margin-top: 3rem;
+      text-align: center;
+    }
+
+    .more-images h2 {
+      margin-bottom: 1rem;
+      font-size: 1.6rem;
+    }
+
+    .slideshow-container {
+      max-width: 300px;
+      margin: 2rem auto;
+      position: relative;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.991);
+    }
+
+    .slides img {
+      display: none;
+      width: 100%;
+      border-radius: 10px;
+    }
+
+    .slides img.active {
+      display: block;
+    }
+
+    @media (max-width: 700px) {
+      .product-card {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .buttons {
+        flex-direction: column;
+        gap: 12px;
+      }
+
+      .buttons button {
+        width: 100%;
+        max-width: 300px;
+      }
+    }
+    
+    </style>
+    
+
+</head>
+<body>
+
+  <header>
+    <h1>Labubu Doll – Rare Collectible</h1>
+    <p>Your next adorable obsession awaits 💛</p>
+  </header>
+
+  <main>
+    <section class="product-card">
+      <!-- <section class="features">
+  <div class="feature">
+    <img src="https://labubu.com.in/cdn/shop/files/authenticity_1.png?v=1752763896" alt="Authenticity Guarantee">
+    <h3>Authenticity Guarantee</h3>
+    <p>100% Original Labubu dolls factory sealed and quality-checked in India.</p>
+  </div>
+  <div class="feature">
+    <img src="https://labubu.com.in/cdn/shop/files/fast-delivery.png?v=1752764066" alt="Free Delivery">
+    <h3>Free Delivery</h3>
+    <p>Safe, trackable delivery to any PIN code free on orders over ₹799.</p>
+  </div>
+  <div class="feature">
+    <img src="https://labubu.com.in/cdn/shop/files/commercial.png?v=1752764114" alt="Easy Returns">
+    <h3>7-Day Easy Returns</h3>
+    <p>In case of any damage before delivery, we accept returns and refund your amount.</p>
+  </div>
+</section> -->
+
+      <div class="product-image">
+        <img src="https://cdn.shopify.com/s/files/1/0683/0194/7201/files/Labubu-how-to-spot-fake-2.jpg?v=1738554288" height="450" width="450">
+      </div>
+      <div class="product-details">
+        <p><strong>Description:</strong> Meet Labubu – the irresistibly quirky doll that’s captured hearts worldwide. A perfect addition to any designer toy lover’s shelf.</p>
+        <p><strong>Price:</strong> <span>$99.00 USD</span></p>
+        <p><strong>Quantity:</strong>
+          <input type="number" min="1" value="1">
+        </p>
+        <div class="rating-stars">
+          <span>★</span><span>★</span><span>★</span><span>★</span><span>☆</span>
+          <span style="margin-left:10px;">4.0/5</span>
+        </div>
+        <p class="stock-alert">🔥 Only 3 left in stock – order soon!</p>
+        <div class="secure-checkout">
+          <span style="margin: 30px;">🔒 look Price</span><span style="margin-right:30px;">visa💳</span><span style="margin-left:30px;" >mastercard💳</span>
+        </div>
+      </div>
+    </section>
+
+    <div class="buttons">
+      <button onclick="alert('Added to cart!')">🛒 Add to Cart</button>
+      <button onclick="alert('Proceeding to checkout...')">💳 Buy Now</button>
+      <button onclick="alert('Saved for later.')">📌 Save for Later</button>
+      <button onclick="alert('aukat he kharid neki.')">ℹ️ Other Info</button>
+    </div>
+
+    <section class="more-images">
+      <h2>More Looks of Labubu 🧸</h2>
+      <div class="slideshow-container">
+        <div class="slides">
+          <img src="https://i5.walmartimages.com/seo/POP-MART-Macaroon-Labubu-The-Understanding-Plush-Toy-Dress-Up-Costume-a-Perfect-Gift-for-a-Youngster-s-Magical-Enchanting-Seclusion-Doll-Adorning_c3133cf2-14a4-485d-a6c3-7492db6c96c3.1f9a5ebe9c76780cee24406e890a851b.jpeg" alt="Labubu Doll Side View">
+          <img src="https://i.ebayimg.com/images/g/ecUAAOSwExNmIi1q/s-l960.jpg" alt="Labubu Doll Closeup">
+          <img src="https://down-my.img.susercontent.com/file/my-11134207-7r98p-lt39h3lzh0c757" alt="Labubu Doll Extra 1">
+          <img src="https://down-ph.img.susercontent.com/file/id-11134207-7rase-m0y2m6ihky4f9e" alt="Labubu Doll Extra 2">
+          <img src="https://media.karousell.com/media/photos/products/2023/10/29/popmart_the_monsters_dress_be__1698567479_412e9fd4_progressive.jpg" alt="Labubu Doll Extra 3">
+        </div>
+      </div>
+    </section>
+  </main>
+  <script>
+    let slideIndex = 0;
+    const slides = document.querySelectorAll(".slides img");
+
+    function showSlide() {
+      slides.forEach((img, i) => {
+        img.classList.remove("active");
+      if (i === slideIndex) img.classList.add("active");
+      });
+
+      slideIndex = (slideIndex + 1) % slides.length;
+    }
+
+    setInterval(showSlide, 3000); // Change image every 2 seconds
+    window.onload = showSlide;
+  </script>
+  <script>
+  function addToCart() {
+    alert('Added to cart!');
+  }
+
+  function buyNow() {
+    const spinner = document.getElementById('spinner');
+    spinner.style.display = 'inline-block';
+    setTimeout(() => {
+      spinner.style.display = 'none';
+      alert('Payment successful!');
+    }, 3000); // animation duration
+  }
+</script>
+<hr>
+<section class="features">
+  <div class="feature">
+    <img src="https://labubu.com.in/cdn/shop/files/authenticity_1.png?v=1752763896" alt="Authenticity Guarantee">
+    <h3>Authenticity Guarantee</h3>
+    <p>100% Original Labubu dolls factory sealed and quality-checked in India.</p>
+  </div>
+  <div class="feature">
+    <img src="https://labubu.com.in/cdn/shop/files/fast-delivery.png?v=1752764066" alt="Free Delivery">
+    <h3>Free Delivery</h3>
+    <p>Safe, trackable delivery to any PIN code free on orders over ₹799.</p>
+  </div>
+  <div class="feature">
+    <img src="https://labubu.com.in/cdn/shop/files/commercial.png?v=1752764114" alt="Easy Returns">
+    <h3>7-Day Easy Returns</h3>
+    <p>In case of any damage before delivery, we accept returns and refund your amount.</p>
+  </div>
+</section>
+ 
+
+  
+</section>
+</body>
+</html> 
+
